@@ -37,7 +37,7 @@ public class BaseTest {
         mabayaLoginPage = new MabayaLoginPage(driver);
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public final void baseUiTearDown(){
         if(driver != null){
             driver.quit();

@@ -1,6 +1,5 @@
 package com.mabaya.model.conf;
 
-import java.util.Map;
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.builder.fluent.Configurations;
 import org.apache.commons.configuration2.ex.ConfigurationException;
@@ -19,10 +18,10 @@ public class EnvConf {
         Configurations configs = new Configurations();
         try {
             properties = configs.properties(getEnvPropFilePath());
-            for(Map.Entry p : System.getProperties().entrySet()){
-                String key = (String)p.getKey();
-                properties.setProperty(key , p.getValue());
-            }
+            System.getProperties().forEach((key1, value) -> {
+                String key = (String) key1;
+                properties.setProperty(key, value);
+            });
         } catch (ConfigurationException e) {
             System.err.println("failed to load '" + getEnvPropFilePath() + "' resource file");
             throw new RuntimeException(e);

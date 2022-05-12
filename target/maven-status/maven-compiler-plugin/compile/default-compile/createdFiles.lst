@@ -1,0 +1,8 @@
+com\mabaya\model\infra\BasePage.class
+com\mabaya\model\pages\HomePage.class
+com\mabaya\model\selenium\Browser.class
+com\mabaya\model\conf\EnvConf.class
+com\mabaya\model\pages\MabayaLoginPage.class
+com\mabaya\model\conf\JsonHandler.class
+com\mabaya\model\api\SimpleHttpClient.class
+com\mabaya\model\infra\PageElements.class

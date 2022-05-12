@@ -13,7 +13,7 @@ import java.util.HashMap;
 
 public class MabayaTest extends BaseTest{
     private SimpleHttpClient simpleHttpClient;
-    private HashMap<String, String> headersMap = new HashMap<>();
+    private final HashMap<String, String> headersMap = new HashMap<>();
 
     @BeforeClass(alwaysRun = true)
     public void testSetup(){
